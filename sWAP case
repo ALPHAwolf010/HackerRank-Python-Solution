@@ -1,6 +1,8 @@
 
 ## Question link -> https://www.hackerrank.com/challenges/swap-case/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
 
+########################Solution 1 
+
 def swap_case(s):
     l1=[];
     for x in s:
@@ -17,6 +19,22 @@ def swap_case(s):
     return l2;
     
 
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+
+
+
+########################## Solution 2  Using  LIST Comprehension 
+
+
+
+def swap_case(s):
+    l1=[x.upper() if x.islower() else x.lower() for x in s ];
+    l2=''.join(l1);
+    return l2;
+   
 if __name__ == '__main__':
     s = input()
     result = swap_case(s)
